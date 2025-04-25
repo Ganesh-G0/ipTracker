@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    >
+    <title>IP Address Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css" >
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    >
+  </head>
+  <body>
+    <header class="header">
+      <h1>IP Address Tracker</h1>
+      <form class="search-form" role="search">
+        <input
+          type="text"
+          id="user-input"
+          placeholder="Search for any IP address or domain"
+          aria-label="IP address or domain"
+        >
+        <button type="submit" id="search-button" aria-label="Search">
+          <img src="./images/icon-arrow.svg" alt="arrow" >
+        </button>
+      </form>
+    </header>
+    <main>
+      <div class="results">
+        <div class="info-card">
+          <article class="info-item">
+            <h2>IP Address</h2>
+            <p class="info-value" id="ip-address"></p>
+          </article>
+
+          <article class="info-item">
+            <h2>Location</h2>
+            <p class="info-value" id="location"></p>
+          </article>
+
+          <article class="info-item">
+            <h2>Timezone</h2>
+            <p class="info-value" id="timezone">
+              UTC <span id="timezone-offset"></span>
+            </p>
+          </article>
+
+          <article class="info-item">
+            <h2>ISP</h2>
+            <p class="info-value" id="isp"></p>
+          </article>
+        </div>
+      </div>
+
+      <div class="map" id="map">
+        <!-- Map will be inserted here -->
+      </div>
+    </main>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
